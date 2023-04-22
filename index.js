@@ -46,15 +46,13 @@ const postMethods = () =>{
   datas.map((postData)=>{
     const postElement=document.createElement('div');
     postElement.classList.add('cards');
-    postElement.innerHTML =
-     (datas) =>` 
-    <h2>${postData.name}</h2>
-    <p>Is a professional ${postData.name} who major in ${postData.major} music</p>
-    <h6>${postData.pronounce} has experience also as a${postData.experience}.</h6>
-    `
+    postElement.innerHTML = `
+      <h2>${postData.name}</h2>
+      <p>Is a professional ${postData.description} who majors in ${postData.major} music</p>
+      <h6>${postData.pronounce} has experience also as a ${postData.experience}.</h6>
+    `;
 
-    postContainer.appendChild(postElement)
-
+    postContainer.appendChild(postElement);
   })
 
 }
